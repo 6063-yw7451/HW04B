@@ -1,60 +1,16 @@
-# p5.js Template
+## Summary
+This is a code which creates an interactive grid of shapes that can be changed by mouseclicking on them.(depends on how many times you click)
 
-This is a README file that can be used to describe and document your assignment.
+## Plan
+I decided to do a playful and interactive board that can be used for DIY pattern making. By clicking different times, the shapes in the block will be changed. Here is a sketch that I did first to clarify what I to do next.
+![Sketch](./CanvasSketch.jpg)
 
-Markdown Cheatsheet (from [https://www.markdownguide.org/cheat-sheet/](https://www.markdownguide.org/cheat-sheet/)):
+Here are the steps for reference:
+1. Use for() function to draw a loop of rect to create a canvas with grids.(make sure the grid positions and shapes can be initialized)
+2. Inside draw() function, there is a loop that iterates through each grid cell:
+   - It draws a hollow grid rectangle.
+   - It checks the value in gridShapes for each grid and draws the corresponding shape (triangle, circle, or rectangle) if applicable.
+3. mousePressed() funtion to determine times and shapes, and check if the mouse click is inside any of the grid. It is cycling through values 0 to 4 (modulus 5) to change the shape.
 
----
----
-
-# Heading1
-## Heading2
-### Heading3
-#### Heading4
-##### Heading5
-###### Heading6
-
-**bold text**
-
-*italicized text*
-
-~~strikethrough text~~
-
-Ordered List:
-1. First item
-2. Second item
-3. Third item
-
-Unordered List:
-- First item
-- Second item
-- Third item
-
-`short code block`
-
-```
-extended code block
-fun() {
-  return 0
-}
-```
-
-Link:  
-[linked text](https://www.example.com)
-
-
-Image with url:  
-![image description](https://dm-gy-6063-2023f-d.github.io/assets/homework/02/clark-espaco-modulado-00.jpg)
-
-
-Image on repo:  
-![image description](./file-name.jpg)
-
-
-To start a new line, add two spaces at the end of a line, like this:  
-this is a new line.
-
-
-To start a new paragraph, leave an empty line between two lines of text.
-
-This is a new paragraph.
+## Hard & Fun
+I think the fun part for writing this code is combining what we learned before that using for() function to create the loop as the basic canvas of this code. And also calculating the accurate position of each shape inside the grid is a little complex and need to be tested for several times.
